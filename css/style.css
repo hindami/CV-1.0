@@ -1,0 +1,667 @@
+/******************\
+    #CSS RESET
+\******************/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/******************\
+    #GENERAl
+\******************/
+
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+	font-family: Arial;
+	src: url("/fonts/Arial.ttf");
+}
+
+/******************\
+ #MIN-WIDTH:1366px
+\******************/
+
+@media screen and (min-width: 1366px) {
+
+  /******************\
+       #GENERAL
+  \******************/
+
+  .container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+	grid-template-rows: 1fr;
+	position: sticky;
+  }
+
+  /******************\
+       #SIDEBAR
+  \******************/
+
+  .sidebar {
+	grid-column: 1/2;
+	grid-row: start/end;
+	background-color: #2d3436;
+  }
+	  
+  	/******************\
+       #SIDEBAR-FOTO
+  	\******************/
+
+	.sidebar__pasfoto {
+		padding: 50px;
+	}
+
+	.pasfoto__img {
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+	}
+
+	.sidebar__subtitle {
+		margin: 40px 20px 0 50px;
+		padding: 0 0 15px 0;
+		font-size: 20px;
+		text-transform: uppercase;
+		color: white;
+		border-bottom: 2px solid white;
+	}
+
+	/******************\
+     #SIDEBAR-ADDRESS
+  	\******************/
+
+	.sidebar__address {
+		margin: 20px 20px 0 50px;
+		padding: 0 0 15px 0;
+		display: grid;
+		grid-template-columns: 20px 1fr;
+		grid-column-gap: 7px ;
+	}
+
+	.address__icon {
+		width: 20px;
+	}
+
+	.address__img {
+		width: 15px;
+	}
+
+	.address__text {
+		color: white;
+	}
+
+	.address__text--h2 {
+		font-weight: bold;
+	}
+
+	.sidebar__phone {
+		margin: 20px 20px 0 50px;
+		padding: 0 0 15px 0;
+		display: grid;
+		grid-template-columns: 20px 1fr;
+		grid-column-gap: 7px ;
+	}
+
+	.phone__icon {
+		width: 20px;
+	}
+
+	.phone__img {
+		width: 15px;
+	}
+
+	.phone__text {
+		color: white;
+	}
+
+	.phone__text--h2 {
+		font-weight: bold;
+	}
+
+	.sidebar__web {
+		margin: 20px 20px 0 50px;
+		padding: 0 0 15px 0;
+		display: grid;
+		grid-template-columns: 20px 1fr;
+		grid-column-gap: 7px ;
+	}
+
+	.web__icon {
+		width: 20px;
+	}
+
+	.web__img {
+		width: 15px;
+	}
+
+	.web__text {
+		color: white;
+	}
+
+	.web__text--h2 {
+		font-weight: bold;
+	}
+
+	.sidebar__facebook {
+		margin: 20px 20px 0 50px;
+		padding: 0 0 15px 0;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.facebook__ikon a img {
+		width: 40px;
+	}
+
+	.instagram__ikon a img {
+		width: 40px;
+	}
+
+	.github__ikon a img {
+		width: 40px;
+	}
+	
+	/******************\
+		 #CONTENT
+	\******************/
+
+  .content {
+	grid-row: start/end;
+	grid-column: 2/3;
+    background-color: white;
+  }
+
+	/******************\
+	 #CONTENT__HEADER
+	\******************/
+
+	.content__header {
+		width: 100%;
+		padding: 50px 53px;
+	}
+
+	.header--h1 {
+		text-transform: uppercase;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 50px;
+		letter-spacing: 1px;
+		font-weight: 600;
+		color: #2d3436;
+	}
+
+	/******************\
+	 #CONTENT__INTERNSHIP
+	\******************/
+
+	.content__internship {
+		width: 100%;
+		padding: 30px 50px;
+	}
+
+	.internship__data {
+		margin: 20px 0;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+	}
+
+	.internship__time {
+		font-weight: bold;
+	}
+
+	/******************\
+	 #CONTENT_SUBTITLE
+	\******************/
+
+	.content__subtitle {
+		width: 100%;
+		margin: 10px 50px;
+		display: grid;
+		grid-template-columns: 60px 1fr;
+		grid-template-rows: 50px;
+		align-items: center;
+		
+	}
+
+	.subtitle__image {
+		position: relative;
+		width: 50px;
+		height: 50px;
+		background-color: #2d3436;
+		border-radius: 50%;
+	}
+
+	.subtitle__img {
+		position: absolute;
+		left: 3px;
+		width: 45px;
+		height: 45px;
+	}
+
+	.subtitle__h2 {
+		font-size: 25px;
+		font-weight: 600;
+		color: #2d3436;
+		text-align: left;
+		text-transform: uppercase;
+	}
+
+
+	/******************\
+	 #CONTENT__TIMELINE
+	\******************/
+
+	.content__timeline {
+		position: relative;
+		width: 100%;
+		height: 200px;
+		padding: 0 20px;
+	}
+
+	.timeline__grid {
+		position: absolute;
+		width: 90%;
+		height: 5px;
+		background: #2d3436;
+		top: 50%;
+		left: 5%;
+	}
+
+	.timeline__dot {
+		position: absolute;
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background: #2d3436;
+		border: 1px solid #2d3436;
+	}
+
+	.timeline__dot:hover {
+		background: white;
+	}
+
+	.dot--1 {
+		top: 49%;
+		left: 18%;
+	}
+
+	.dot--2 {
+		top: 49%;
+		left: 39%;
+	}
+
+	.dot--3 {
+		top: 49%;
+		left: 62%;
+	}
+
+	.dot--4 {
+		top: 49%;
+		left: 81%;
+	}
+
+	.timeline__text {
+		position: absolute;
+		text-align: center;
+	  color: #2d3436;
+	}
+
+	.text--1 {
+		top: 55%;
+		left: 8.5%;
+	}
+	.text--2 {
+		top: 55%;
+		left: 33.5%;
+	}
+	.text--3 {
+		top: 55%;
+		left: 56.5%;
+	}
+	.text--4 {
+		top: 55%;
+		left: 75%;
+	}
+
+	/******************\
+	 #CONTENT__SKILLS
+	\******************/
+	
+	.content__skills {
+		width: 100%;
+		margin: 30px 10px;
+		padding: 0 50px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	/******************\
+	 #CONTENT__SKILLS--HTML5
+	\******************/
+
+	.html__percent {
+		position: relative;
+		width: 150px;
+	}
+
+	.html__svg {
+		position: relative;
+  		width: 150px;
+  		height: 150px;
+  		z-index: 1000;	
+	}
+
+	.html__circle {
+		width: 100%;
+  		height: 100%;
+  		fill: none;
+  		stroke: #b2bec3;
+  		stroke-width: 9;
+  		stroke-linecap: round;
+  		transform: translate(5px,5px);
+	}
+
+	.html__circle:nth-child(2) {
+		stroke-dasharray: 440;
+		stroke-dashoffset: 440;
+	}
+
+	.html__circle:nth-child(2) {
+		stroke-dashoffset: calc(440 - (440 * 50) / 100);
+		stroke: #636e72;
+	}
+
+	.html__img {
+		position: absolute;
+		width: 60px;
+		top: 35px;
+		left: 45px;
+		z-index: 1001;
+	}
+
+	.html__nom {
+		margin-top: 10px;
+		text-align: center;
+	}
+	.html__nom--h2 {
+		font-family: 'Bebas Neue', cursive;
+		font-size: 30px;
+	}
+
+	/******************\
+	 #CONTENT__SKILLS--CSS3
+	\******************/
+
+	.css__percent {
+		position: relative;
+		width: 150px;
+	}
+
+	.css__svg {
+  		width: 150px;
+  		height: 150px;
+  		z-index: 1000;	
+	}
+
+	.css__circle {
+		width: 100%;
+  		height: 100%;
+  		fill: none;
+  		stroke: #b2bec3;
+  		stroke-width: 9;
+  		stroke-linecap: round;
+  		transform: translate(5px,5px);
+	}
+
+	.css__circle:nth-child(2) {
+		stroke-dasharray: 440;
+		stroke-dashoffset: 440;
+	}
+
+	.css__circle:nth-child(2) {
+		stroke-dashoffset: calc(440 - (440 * 50) / 100);
+		stroke: #636e72;
+	}
+
+	.css__img {
+		position: absolute;
+		width: 60px;
+		top: 35px;
+		left: 45px;
+		z-index: 1001;
+	}
+
+	.css__nom {
+		margin-top: 10px;
+		text-align: center;
+	}
+	.css__nom--h2 {
+		font-family: 'Bebas Neue', cursive;
+		font-size: 30px;
+	}
+
+	/******************\
+	 #CONTENT__SKILLS--JS
+	\******************/
+
+	.js__percent {
+		position: relative;
+		width: 150px;
+	}
+
+	.js__svg {
+  		width: 150px;
+  		height: 150px;
+  		z-index: 1000;	
+	}
+
+	.js__circle {
+		width: 100%;
+  		height: 100%;
+  		fill: none;
+  		stroke: #b2bec3;
+  		stroke-width: 9;
+  		stroke-linecap: round;
+  		transform: translate(5px,5px);
+	}
+
+	.js__circle:nth-child(2) {
+		stroke-dasharray: 440;
+		stroke-dashoffset: 440;
+	}
+
+	.js__circle:nth-child(2) {
+		stroke-dashoffset: calc(440 - (440 * 30) / 100);
+		stroke: #636e72;
+	}
+
+	.js__img {
+		position: absolute;
+		width: 60px;
+		top: 45px;
+		left: 45px;
+		z-index: 1001;
+	}
+
+	.js__nom {
+		margin-top: 10px;
+		text-align: center;
+	}
+	.js__nom--h2 {
+		font-family: 'Bebas Neue', cursive;
+		font-size: 30px;
+	}
+
+	/******************\
+	 #CONTENT__SKILLS--REACT
+	\******************/
+
+	.react__percent {
+		position: relative;
+		width: 150px;
+	}
+
+	.react__svg {
+  		width: 150px;
+  		height: 150px;
+  		z-index: 1000;	
+	}
+
+	.react__circle {
+		width: 100%;
+  		height: 100%;
+  		fill: none;
+  		stroke: #b2bec3;
+  		stroke-width: 9;
+  		stroke-linecap: round;
+  		transform: translate(5px,5px);
+	}
+
+	.react__circle:nth-child(2) {
+		stroke-dasharray: 440;
+		stroke-dashoffset: 440;
+	}
+
+	.react__circle:nth-child(2) {
+		stroke-dashoffset: calc(440 - (440 * 20) / 100);
+		stroke: #636e72;
+	}
+
+	.react__img {
+		position: absolute;
+		width: 60px;
+		top: 35px;
+		left: 45px;
+		z-index: 1001;
+	}
+
+	.react__nom {
+		margin-top: 10px;
+		text-align: center;
+	}
+	.react__nom--h2 {
+		font-family: 'Bebas Neue', cursive;
+		font-size: 30px;
+	}
+
+	/******************\
+	 #CONTENT__SKILLS--BOOT
+	\******************/
+
+	.boot__percent {
+		position: relative;
+		width: 150px;
+	}
+
+	.boot__svg {
+  		width: 150px;
+  		height: 150px;
+  		z-index: 1000;	
+	}
+
+	.boot__circle {
+		width: 100%;
+  		height: 100%;
+  		fill: none;
+  		stroke: #b2bec3;
+  		stroke-width: 9;
+  		stroke-linecap: round;
+  		transform: translate(5px,5px);
+	}
+
+	.boot__circle:nth-child(2) {
+		stroke-dasharray: 440;
+		stroke-dashoffset: 440;
+	}
+
+	.boot__circle:nth-child(2) {
+		stroke-dashoffset: calc(440 - (440 * 10) / 100);
+		stroke: #636e72;
+	}
+
+	.boot__img {
+		position: absolute;
+		width: 60px;
+		top: 45px;
+		left: 45px;
+		z-index: 1001;
+	}
+
+	.boot__nom {
+		margin-top: 10px;
+		text-align: center;
+	}
+	.boot__nom--h2 {
+		font-family: 'Bebas Neue', cursive;
+		font-size: 30px;
+	}
+
+	/******************\
+	 #FOOTER
+	\******************/
+
+	.footer {
+		width: 100%;
+		padding: 20px 53px;
+	}
+
+
+
+
+
+}
